@@ -1,0 +1,17 @@
+{
+  "title": "Viagens",
+
+  "mensagem": {
+    "obrigatorio": "Obrigatório",
+    "listarErro": "Problema ao listar serviços. Tente novamente.",
+    "listarServicosAssinanteErro": "Problema ao listar serviços do Assinante. Tente novamente.",
+    "dadosServicoErro": "Problema ao carregar dados do serviço. Tente novamente.",
+    "adicionarSucesso": "Novo serviço adicionado com sucesso.",
+    "adicionarErro": "Problema ao adicionar serviço. Tente novamente.",
+    "atualizarSucesso": "Serviço atualizado com sucesso.",
+    "atualizarErro": "Problema ao atualizar serviço. Tente novamente.",
+    "deletarSucesso": "Serviço deletado com sucesso.",
+    "deletarErro": "Problema ao deletar serviço. Tente novamente.",
+    "removerConfirmacao": "Tem certeza que quer remover?"
+  }
+}

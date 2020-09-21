@@ -1,0 +1,17 @@
+.box-header {
+  display: table;
+  border-bottom: 1px solid var(--default-bg);
+}
+.box-header > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.box-header > div.logo {
+  width: 1%;
+}
+.box-header > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}

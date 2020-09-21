@@ -1,0 +1,316 @@
+.form-box {
+  position: relative;
+}
+.form-box label {
+  color: var(--input-color);
+  display: block;
+  font-size: 1.2em;
+  padding-bottom: 5px;
+}
+
+.form-box input,
+.form-box textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  color: var(--input-color);
+  display: block;
+  font-size: 1em;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.form-box textarea {
+  min-height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  outline: none;
+}
+
+.form-box > div {
+  position: relative;
+}
+.form-box .input-actions {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 4px;
+  top: 0;
+}
+
+.form-box .input-actions button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
+  color: var(--input-color);
+  cursor: pointer;
+
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  min-height: 30px;
+  min-width: 30px;
+}
+
+.form-box .input-actions button:hover {
+  background-color: var(--secondary-bgh);
+  color: var(--secondary-color);
+}
+
+.form-box .input-actions button:active {
+  position: relative;
+  top: 1px;
+}
+.form-box .input-actions button:focus {
+  outline: none;
+}
+
+.form-box .textarea-actions {
+  height: 100%;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.form-box .textarea-actions button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  cursor: pointer;
+
+  display: flex;
+  font-size: 14px;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.form-box .textarea-actions button:hover {
+  background-color: var(--secondary-bgh);
+}
+
+.form-box .textarea-actions button:active {
+  position: relative;
+  top: 1px;
+}
+.form-box .textarea-actions button:focus {
+  outline: none;
+}
+
+button.select-selected {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  color: var(--input-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  padding: 8px 15px;
+  width: 100%;
+}
+button.select-selected:after {
+  content: '';
+  border-bottom: 2px solid var(--input-color);
+  border-left: 2px solid var(--input-color);
+  height: 8px;
+  width: 8px;
+  transform: rotate(-50deg);
+  transition: all 0.1s;
+}
+button.select-selected.open:after {
+  margin-top: 4px;
+  transform: rotate(135deg);
+  transition: all 0.1s;
+}
+.select-filter {
+  position: relative;
+  margin: 6px 10px;
+}
+.select-actions-all {
+  position: relative;
+  margin: 6px 10px;
+}
+.select-actions-all > button:first-child {
+  margin-left: 0px;
+}
+.select-actions-all > button {
+  margin-left: 10px;
+}
+
+.select-box {
+  background-color: var(--background-page);
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  position: absolute;
+  max-height: 300px;
+
+  top: 100%;
+  width: 100%;
+  z-index: 3;
+}
+.select-box .select-options {
+  position: relative;
+}
+
+.select-box .select-options > div {
+  border-top: 1px solid var(--input-bgh);
+  color: var(--input-color);
+  cursor: pointer;
+  padding: 6px 10px;
+  position: relative;
+}
+.select-box .select-options > div:hover {
+  background-color: var(--secondary-bgh);
+  color: var(--secondary-color);
+}
+.select-box .select-options > div.selected {
+  background-color: var(--secondary-bgh);
+  color: var(--input-color);
+}
+.select-box .select-options > div:active {
+  position: relative;
+  top: 1px;
+}
+
+.select-box .select-options > div {
+  align-items: center;
+  display: flex;
+}
+
+.select-box.multiselect .select-options > div.selected {
+  background-color: var(--input-bg);
+}
+.select-box.multiselect .select-options .checkelement {
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  color: var(--color);
+  cursor: pointer;
+  display: inline-block;
+  height: 18px;
+  margin-right: 8px;
+  position: relative;
+  width: 18px;
+}
+.select-box.multiselect .select-options > div.selected .checkelement {
+  background-color: var(--primary-bg);
+}
+.select-box.multiselect .select-options > div.selected .checkelement:after {
+  content: '';
+  border-bottom: 2px solid var(--secondary-color);
+  border-left: 2px solid var(--secondary-color);
+  height: 9px;
+  left: 1px;
+  margin-right: 8px;
+  position: absolute;
+  top: 0px;
+  width: 14px;
+  transform: rotate(-50deg);
+}
+
+.check-box {
+  align-items: center;
+  color: var(--input-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1em;
+  line-height: 34px;
+  margin-left: 10px;
+}
+.check-box:first-child {
+  margin-left: 0px;
+}
+.check-box .checkbox {
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  display: inline-block;
+  height: 20px;
+  margin-right: 8px;
+  position: relative;
+  transition: all 0.3s;
+  width: 20px;
+}
+.check-box.checked .checkbox {
+  background-color: var(--primary-bg);
+  transition: all 0.3s;
+}
+.check-box.checked .checkbox:after {
+  content: '';
+  border-bottom: 3px solid var(--secondary-color);
+  border-left: 3px solid var(--secondary-color);
+  height: 10px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 15px;
+  transform: rotate(-50deg);
+  transition: all 0.3s;
+}
+
+.check-box .switch {
+  border: 1px solid var(--input-bgh);
+  border-radius: 50px;
+  display: inline-block;
+  height: 20px;
+  margin-right: 8px;
+  position: relative;
+  transition: all 0.3s;
+  width: 45px;
+}
+.check-box.checked .switch {
+  background-color: var(--primary-bg);
+  transition: all 0.3s;
+}
+.check-box .switch:after {
+  content: '';
+  background-color: var(--primary-color);
+  border: 1px solid var(--input-bgh);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 3px 0px var(--input-bgh);
+  height: 20px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  transition: all 0.3s;
+  width: 20px;
+}
+.check-box.checked .switch:after {
+  margin-left: 25px;
+  transition: all 0.3s;
+}
+
+.radio-box {
+  align-items: center;
+  color: var(--input-color);
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 34px;
+  margin-left: 10px;
+}
+.radio-box:first-child {
+  margin-left: 0px;
+}
+.radio-box .checkbox {
+  border: 1px solid var(--input-bgh);
+  border-radius: 50%;
+  display: inline-block;
+  height: 20px;
+  margin-right: 8px;
+  position: relative;
+  transition: all 0.3s;
+  width: 20px;
+}
+.radio-box.checked .checkbox {
+  background-color: var(--primary-bg);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 2px var(--primary-color);
+  transition: all 0.3s;
+}

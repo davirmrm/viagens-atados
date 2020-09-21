@@ -1,0 +1,253 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--color-page);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  padding: 8px 15px;
+  transition: all 0.15s;
+}
+
+.btn.circle {
+  align-items: center;
+  border-radius: 50px;
+  display: inline-flex;
+  font-size: 1em;
+  justify-content: center;
+  min-height: 34px;
+  min-width: 34px;
+  padding: 6px;
+}
+
+.btn.block {
+  width: 100%;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn > svg {
+  font-size: 20px;
+}
+
+.btn.normal.default {
+  background-color: var(--default-bg);
+  border-color: var(--default-bgh);
+  color: var(--default-color);
+}
+.btn.normal.primary {
+  background-color: var(--primary-bg);
+  border-color: var(--primary-bgh);
+  color: var(--primary-color);
+}
+.btn.normal.secondary {
+  background-color: var(--secondary-bg);
+  border-color: var(--secondary-bgh);
+  color: var(--secondary-color);
+}
+.btn.normal.success {
+  background-color: var(--success-bg);
+  border-color: var(--success-bgh);
+  color: var(--success-color);
+}
+.btn.normal.warning {
+  background-color: var(--warning-bg);
+  border-color: var(--warning-bgh);
+  color: var(--warning-color);
+}
+.btn.normal.danger {
+  background-color: var(--error-bg);
+  border-color: var(--error-bgh);
+  color: var(--error-color);
+}
+
+.btn.normal.default:hover {
+  background-color: var(--default-bgh);
+}
+.btn.normal.primary:hover {
+  background-color: var(--primary-bgh);
+}
+.btn.normal.secondary:hover {
+  background-color: var(--secondary-bgh);
+}
+.btn.normal.success:hover {
+  background-color: var(--success-bgh);
+}
+.btn.normal.warning:hover {
+  background-color: var(--warning-bgh);
+}
+.btn.normal.danger:hover {
+  background-color: var(--error-bgh);
+}
+
+.btn.outline.default {
+  border-color: var(--default-bg);
+  color: var(--color-page);
+}
+.btn.outline.primary {
+  border-color: var(--primary-bg);
+  color: var(--color-page);
+}
+.btn.outline.secondary {
+  border-color: var(--secondary-bg);
+  color: var(--color-page);
+}
+.btn.outline.success {
+  border-color: var(--success-bg);
+  color: var(--color-page);
+}
+.btn.outline.warning {
+  border-color: var(--warning-bg);
+  color: var(--color-page);
+}
+.btn.outline.danger {
+  border-color: var(--error-bg);
+  color: var(--color-page);
+}
+
+.btn.outline.default:hover {
+  background-color: var(--default-bg);
+  color: var(--default-color);
+}
+.btn.outline.primary:hover {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+.btn.outline.secondary:hover {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+}
+.btn.outline.success:hover {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+}
+.btn.outline.warning:hover {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+}
+.btn.outline.danger:hover {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+}
+
+.btn.outlined.default {
+  border-color: var(--default-bg);
+  color: var(--default-bg);
+}
+.btn.outlined.primary {
+  border-color: var(--primary-bg);
+  color: var(--primary-bg);
+}
+.btn.outlined.secondary {
+  border-color: var(--secondary-bg);
+  color: var(--secondary-bg);
+}
+.btn.outlined.success {
+  border-color: var(--success-bg);
+  color: var(--success-bg);
+}
+.btn.outlined.warning {
+  border-color: var(--warning-bg);
+  color: var(--warning-bg);
+}
+.btn.outlined.danger {
+  border-color: var(--error-bg);
+  color: var(--error-bg);
+}
+
+.btn.outlined.default:hover {
+  background-color: var(--default-bg);
+  color: var(--default-color);
+}
+.btn.outlined.primary:hover {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+.btn.outlined.secondary:hover {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+}
+.btn.outlined.success:hover {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+}
+.btn.outlined.warning:hover {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+}
+.btn.outlined.danger:hover {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+}
+
+.link {
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-bottom-width: 1px;
+  color: var(--color-page);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.link:active {
+  position: relative;
+  top: 1px;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link.normal.default {
+  color: var(--default-bg);
+}
+.link.normal.primary {
+  color: var(--primary-bg);
+}
+.link.normal.secondary {
+  color: var(--secondary-bg);
+}
+.link.normal.success {
+  color: var(--success-bg);
+}
+.link.normal.warning {
+  color: var(--warning-bg);
+}
+.link.normal.danger {
+  color: var(--error-bg);
+}
+.link.normal:hover {
+  opacity: 0.7;
+}
+
+.link.outlined {
+  color: var(--color-page);
+}
+
+.link.outlined.default:hover {
+  border-color: var(--default-bg);
+}
+.link.outlined.primary:hover {
+  border-color: var(--primary-bg);
+}
+.link.outlined.secondary:hover {
+  border-color: var(--secondary-bg);
+}
+.link.outlined.success:hover {
+  border-color: var(--success-bg);
+}
+.link.outlined.warning:hover {
+  border-color: var(--warning-bg);
+}
+.link.outlined.danger:hover {
+  border-color: var(--error-bg);
+}

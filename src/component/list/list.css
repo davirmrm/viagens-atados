@@ -1,0 +1,23 @@
+.list-box {
+  border-top: 1px solid var(--list-bgh);
+  border-spacing: 0;
+  color: var(--list-color);
+  position: relative;
+  width: 100%;
+}
+.list-box td {
+  border-bottom: 1px solid var(--list-bgh);
+  padding: 2px 10px;
+}
+.list-box thead td {
+  background-color: var(--list-bgh);
+  padding: 8px 10px;
+}
+
+.list-box tbody tr:hover td {
+  background-color: var(--list-bg);
+}
+.list-box .actions {
+  white-space: nowrap;
+  width: 1%;
+}

@@ -1,0 +1,39 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "name": "Explore",
+      "url": "explore"
+    },
+    {
+      "id": "2",
+      "name": "Sobre nós",
+      "url": "sobreNos"
+    },
+    {
+      "id": "3",
+      "name": "Seguros",
+      "url": "seguros"
+    },
+    {
+      "id": "4",
+      "name": "Hotéis",
+      "url": "hoteis"
+    }
+  ],
+  "menuLogout": [
+    {
+      "id": "1",
+      "name": "Viagens",
+      "url": "viagens"
+    },
+    {
+      "id": "2",
+      "name": "Login",
+      "url": "/login",
+      "color": "default",
+      "type": "btn",
+      "variant": "outlined"
+    }
+  ]
+}
