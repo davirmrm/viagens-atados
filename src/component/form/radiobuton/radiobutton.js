@@ -9,7 +9,8 @@ export function RadioButton({
   type = 'checkbox',
   color = '',
   optionLabel = 'name',
-  optionValue = 'id'
+  optionValue = 'id',
+  className = ''
 }) {
   const checkedAction = e => {
     const resp = e
@@ -21,7 +22,7 @@ export function RadioButton({
   }
 
   return (
-    <div className={`form-box ${color} `}>
+    <div className={`form-box ${color} ${className}`}>
       <label htmlFor={`id-${name}`}>{label}</label>
       <div>
         {options

@@ -1,11 +1,31 @@
 import React from 'react'
 
-export function Input({ children, action, value, label, name, type = 'text', color = '', disabled = false }) {
+export function Input({
+  children,
+  action,
+  value,
+  label,
+  name,
+  type = 'text',
+  color = '',
+  disabled = false,
+  before = '',
+  className = ''
+}) {
   return (
-    <div className={`form-box ${color} `}>
+    <div className={`form-box ${color} ${className}`}>
       <label htmlFor={`id-${name}`}>{label}</label>
       <div>
-        <input type={type} name={name} id={`id-${name}`} value={value} onChange={action} disabled={disabled} />
+        {before ? <span className='before-input'>{before}</span> : null}
+        <input
+          style={{ paddingLeft: before ? '35px' : null }}
+          type={type}
+          name={name}
+          id={`id-${name}`}
+          value={value}
+          onChange={action}
+          disabled={disabled}
+        />
 
         {children && children.length ? (
           children.map(e => {

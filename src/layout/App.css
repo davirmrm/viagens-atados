@@ -2,10 +2,6 @@ body {
   background-color: var(--background-page);
   color: var(--color-page);
 }
-.box-app {
-  overflow: auto;
-  height: 100%;
-}
 
 [hidden],
 .hidden {
@@ -15,43 +11,78 @@ body {
 *:focus {
   outline: none;
 }
-
-.App {
-  text-align: center;
+.app-background {
+  background: linear-gradient(180deg, #a0aec0 0%, #718096 100%);
+  height: 547px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box-app {
+  overflow: auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.box-app > header,
+.box-app > div {
+  max-width: 1020px;
+  margin: auto;
+  width: 100%;
+}
+.box-app > div {
+  padding: 0 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.row {
+  display: block;
+  margin: 0px -10px !important;
+  padding: 0 15px !important;
+}
+
+[class*='col-'] {
+  display: inline-block;
+  padding: 0 10px;
+  width: 100%;
+}
+
+@media (min-width: 760px) {
+  .col-1 {
+    width: calc(100% / 12);
   }
-}
-.App-header {
-  /* background-color: #282c34; */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.App-link {
-  color: #61dafb;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .col-2 {
+    width: calc(100% / 12 * 2);
   }
-  to {
-    transform: rotate(360deg);
+  .col-3 {
+    width: calc(100% / 4);
+  }
+  .col-4 {
+    width: calc(100% / 12 * 4);
+  }
+  .col-5 {
+    width: calc(100% / 12 * 5);
+  }
+  .col-6 {
+    width: calc(100% / 2);
+  }
+  .col-7 {
+    width: calc(100% / 12 * 7);
+  }
+  .col-8 {
+    width: calc(100% / 12 * 8);
+  }
+  .col-9 {
+    width: calc(100% / 12 * 9);
+  }
+  .col-10 {
+    width: calc(100% / 12 * 10);
+  }
+  .col-11 {
+    width: calc(100% / 12 * 11);
+  }
+  .col-12 {
+    width: calc(100%);
   }
 }

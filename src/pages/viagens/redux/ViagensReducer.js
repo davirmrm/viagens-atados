@@ -2,11 +2,10 @@ import { ATUALIZAR_CONTEUDO_FILTRO } from './ViagensActions'
 
 const initialState = {
   filtro: {
-    tipoIdaVolta: { id: '0', name: 'Ida e volta' },
     origem: '',
     destino: '',
     data: '',
-    numeroPessoas: { id: '1', name: '1 pessoas' }
+    pessoas: ''
   },
   viagens: []
 }

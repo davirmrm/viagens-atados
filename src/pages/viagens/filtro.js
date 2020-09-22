@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Button, IcoSearch, Input, Select } from '../../component'
+import {
+  Button,
+  Data,
+  IcoCalendario,
+  IcoImagem,
+  IcoLocalizacao,
+  IcoPesquisar,
+  IcoPessoa,
+  IcoSearch,
+  Input
+} from '../../component'
 import { RadioButton } from '../../component/form/radiobuton/radiobutton'
 import { atualizarFiltro } from './redux/ViagensActions'
 
 export default () => {
   const dispatch = useDispatch()
+  const [tipoIdaVolta, setTipoIdaVolta] = useState({ id: '0', name: 'Ida e volta' })
 
   const locales = useSelector(state => state.appState.idioma)
   const defaltText = require(`./nls/${locales}.json`)
@@ -16,37 +27,64 @@ export default () => {
     { id: '1', name: 'Só ida' },
     { id: '2', name: 'Só volta' }
   ]
-  const selectNPessoas = [
-    { id: '1', name: '1 pessoa' },
-    { id: '2', name: '2 pessoas' },
-    { id: '3', name: '3 pessoas' },
-    { id: '4', name: '4 pessoas' },
-    { id: '5', name: '5 pessoas' },
-    { id: '6', name: '6 pessoas' },
-    { id: '7', name: '7 pessoas' }
-  ]
+  const textoData = ['Ida / Retorno', 'Ida', 'Retorno']
+
   return (
     <div className='box-filtro'>
-      <RadioButton
-        label=''
-        name='tipoIdaVolta'
-        action={e => dispatch(atualizarFiltro(e))}
-        checked={filtro.tipoIdaVolta}
-        options={selectIdaVolta}
-      />
-      <Input label='Origem' name='origem' action={e => dispatch(atualizarFiltro(e))} value={filtro.origem} />
-      <Input label='Destino' name='destino' action={e => dispatch(atualizarFiltro(e))} value={filtro.destino} />
-      <Input label='Data de Ida / Retorno' name='data' action={e => dispatch(atualizarFiltro(e))} value={filtro.data} />
-      <Select
-        label='Número de pessoas'
-        name='numeroPessoas'
-        action={e => dispatch(atualizarFiltro(e))}
-        options={selectNPessoas}
-        selected={filtro.numeroPessoas}
-      />
-      <Button color='primary' variant='normal'>
-        <IcoSearch /> Busque as viagens
-      </Button>
+      <div className='row'>
+        <RadioButton
+          label=''
+          name='tipoIdaVolta'
+          action={e =>
+            dispatch([setTipoIdaVolta(e.target.value), atualizarFiltro({ target: { name: 'data', value: '' } })])
+          }
+          checked={tipoIdaVolta}
+          options={selectIdaVolta}
+          className='col-12'
+        />
+      </div>
+      <div className='row'>
+        <Input
+          label='Origem'
+          name='origem'
+          action={e => dispatch(atualizarFiltro(e))}
+          value={filtro.origem}
+          before={<IcoImagem />}
+          className='col-3'
+        />
+        <Input
+          label='Destino'
+          name='destino'
+          action={e => dispatch(atualizarFiltro(e))}
+          value={filtro.destino}
+          before={<IcoLocalizacao />}
+          className='col-3'
+        />
+        <div className='col-3'>
+          <Data
+            label={'Data de ' + textoData[tipoIdaVolta.id]}
+            name='data'
+            action={e => dispatch(atualizarFiltro(e))}
+            value={filtro.data}
+            before={<IcoCalendario />}
+            inicioFim={tipoIdaVolta.id === '0' ? true : false}
+          />
+        </div>
+        <Input
+          label='Número de pessoas'
+          name='pessoas'
+          type='number'
+          action={e => dispatch(atualizarFiltro(e))}
+          value={filtro.pessoas}
+          before={<IcoPessoa />}
+          className='col-3'
+        />
+      </div>
+      <div className='box-btn'>
+        <Button color='primary' action={() => console.log(filtro)} variant='normal'>
+          <IcoPesquisar /> Busque as viagens
+        </Button>
+      </div>
     </div>
   )
 }

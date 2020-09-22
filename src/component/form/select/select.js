@@ -19,7 +19,8 @@ export function Select({
   charge = chargeDefault,
   optionLabel = 'name',
   optionValue = 'id',
-  optionCustom = ''
+  optionCustom = '',
+  before = ''
 }) {
   const [selectOpen, setSelectOpen] = useState(false)
   const [selectState, setSelectState] = useState([])
@@ -112,6 +113,7 @@ export function Select({
           className={`select-selected ${selectOpen ? 'open' : ''}`}
           onClick={() => openSelect(!disabled ? !selectOpen : false)}
         >
+          {before ? before : null}
           {textButton(selected)}
         </button>
 

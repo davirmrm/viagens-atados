@@ -6,9 +6,12 @@ import './App.css'
 
 export default () => {
   return (
-    <div className='box-app'>
-      <Header />
-      <AppRoutes />
-    </div>
+    <>
+      <div className='app-background'></div>
+      <div className='box-app'>
+        <Header />
+        <AppRoutes />
+      </div>
+    </>
   )
 }

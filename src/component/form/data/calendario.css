@@ -1,0 +1,22 @@
+.box-calendario {
+  background-color: var(--default-bg);
+  border: 1px solid var(--input-bgh);
+  border-radius: 4px;
+  position: absolute;
+  z-index: 2;
+}
+.box-calendario thead td {
+  text-align: center;
+}
+.box-calendario tbody td {
+  opacity: 0.5;
+}
+.box-calendario td.mes-atual {
+  opacity: 1;
+}
+.box-calendario td.dia-atual {
+  opacity: 1;
+}
+.box-calendario td.dia-atual .btn.normal.default {
+  color: var(--primary-bg);
+}

@@ -292,6 +292,7 @@ button.select-selected.open:after {
   color: var(--input-color);
   cursor: pointer;
   display: inline-flex;
+  font-size: 1.2em;
   line-height: 34px;
   margin-left: 10px;
 }
@@ -309,8 +310,13 @@ button.select-selected.open:after {
   width: 20px;
 }
 .radio-box.checked .checkbox {
-  background-color: var(--primary-bg);
+  background-color: var(--primary-color);
   border-radius: 50%;
-  box-shadow: inset 0px 0px 0px 2px var(--primary-color);
+  box-shadow: inset 0px 0px 0px 5px var(--primary-bg);
   transition: all 0.3s;
+}
+.before-input {
+  position: absolute;
+  top: 5px;
+  left: 4px;
 }

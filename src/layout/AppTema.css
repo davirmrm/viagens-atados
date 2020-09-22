@@ -1,10 +1,10 @@
 :root {
   --default-bg: #fff;
-  --default-bgh: #fff;
-  --default-color: #222;
+  --default-bgh: #e6e6e6;
+  --default-color: #4a5568;
 
-  --primary-bg: #0085a7;
-  --primary-bgh: #0069d9;
+  --primary-bg: #667eea;
+  --primary-bgh: #465cbb;
   --primary-color: #fff;
 
   --secondary-bg: #6c757d;
@@ -27,12 +27,15 @@
   --scrollbar-thumb: #3e5055;
   --scrollbar-thumbh: #2f3d41;
 
-  --background-page: #222;
-  --color-page: #fff;
+  --background-page: #edf2f7;
+  --color-page: #4a5568;
+
+  --background-header: #718096;
+  --color-header: #222;
 
   --input-bg: transparent;
-  --input-bgh: #666;
-  --input-color: #fff;
+  --input-bgh: #cbd5e0;
+  --input-color: #4a5568;
 
   --list-bg: transparent;
   --list-bgh: #2f3031;

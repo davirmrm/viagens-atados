@@ -1,6 +1,8 @@
 .box-header {
   display: table;
   border-bottom: 1px solid var(--default-bg);
+  font-size: 16px;
+  padding: 4px 10px;
 }
 .box-header > div {
   display: table-cell;
@@ -14,4 +16,25 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
+}
+.box-header > button {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .box-header > button {
+    display: block;
+    float: right;
+  }
+  .box-header .menu-box {
+    display: none !important;
+    position: absolute;
+    top: 72px;
+  }
+  .box-header .menu-box .box-menu {
+    width: 100%;
+  }
+  .box-header .menu-box button {
+    width: 100%;
+  }
 }
