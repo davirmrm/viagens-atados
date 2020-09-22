@@ -6,7 +6,6 @@ export function Menu({ data }) {
   return (
     <div className='box-menu'>
       {data.map(item => {
-        console.log(item, 'item')
         return (
           <Button
             key={`${item.id}-${item.url}`}

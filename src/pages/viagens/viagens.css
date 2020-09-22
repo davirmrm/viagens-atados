@@ -40,3 +40,30 @@
   margin-top: 15px;
   padding: 15px 15px;
 }
+
+.box-filtro .before-input {
+  font-size: 20px;
+}
+
+.json-resposta {
+  background-color: var(--background-page);
+  border-radius: 10px;
+  margin: 100px auto 100px;
+  max-width: 650px;
+  padding: 10px 20px;
+}
+.json-resposta h4 {
+  font-size: 20px;
+  margin: 0;
+}
+.json-resposta span span {
+  display: block;
+  font-size: 20px;
+  margin-left: 40px;
+  color: #2d3748;
+}
+
+.json-resposta span span:first-child,
+.json-resposta span span:last-child {
+  margin: 0;
+}

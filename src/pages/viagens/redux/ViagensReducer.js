@@ -1,4 +1,4 @@
-import { ATUALIZAR_CONTEUDO_FILTRO } from './ViagensActions'
+import { ATUALIZAR_CONTEUDO_FILTRO, ATUALIZAR_FORUM } from './ViagensActions'
 
 const initialState = {
   filtro: {
@@ -7,7 +7,13 @@ const initialState = {
     data: '',
     pessoas: ''
   },
-  viagens: []
+  viagens: [],
+  forum: {
+    origem: '',
+    destino: '',
+    data: '',
+    pessoas: ''
+  }
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -19,6 +25,11 @@ export default (state = initialState, { type, payload }) => {
           ...state.filtro,
           [payload.target.name]: payload.target.value
         }
+      }
+    case ATUALIZAR_FORUM:
+      return {
+        ...state,
+        forum: payload
       }
     default:
       return state

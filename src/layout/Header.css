@@ -15,21 +15,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  min-height: 60px;
 }
-.box-header > button {
+.box-header .menu-btn {
   display: none;
 }
 
 @media (max-width: 760px) {
-  .box-header > button {
+  .box-header .menu-btn {
+    margin: 9px 0;
     display: block;
     float: right;
   }
+  .box-header .menu-btn svg {
+    font-size: 29px;
+    display: flex;
+  }
   .box-header .menu-box {
+    background-color: #718096;
     display: none !important;
     position: absolute;
     top: 72px;
+    padding: 10px 15px;
+    right: 0;
+  }
+  .box-header .menu-box.aberto {
+    display: block !important;
+  }
+  .box-header .menu-box button {
+    padding: 10px 15px;
   }
   .box-header .menu-box .box-menu {
     width: 100%;

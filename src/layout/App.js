@@ -3,11 +3,12 @@ import AppRoutes from '../router'
 import Header from './Header'
 import './AppTema.css'
 import './App.css'
+import { Alert } from '../component'
 
 export default () => {
   return (
     <>
-      <div className='app-background'></div>
+      <Alert />
       <div className='box-app'>
         <Header />
         <AppRoutes />

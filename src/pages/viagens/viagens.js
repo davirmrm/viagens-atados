@@ -4,7 +4,7 @@ import Filtro from './filtro'
 import './viagens.css'
 
 export default () => {
-  const filtro = useSelector(state => state.viagensState.filtro)
+  const forum = useSelector(state => state.viagensState.forum)
   return (
     <div className='box-viagens'>
       <div className='box-chamada'>
@@ -13,6 +13,17 @@ export default () => {
       </div>
       <Filtro />
       {/* <pre>{filtro}</pre> */}
+      <div className='json-resposta'>
+        <h4>VALOR DO FORM</h4>
+        <span className='codigo'>
+          <span>{'{'}</span>
+          <span>{`"origem": ${forum.origem}`}</span>
+          <span>{`"destino": ${forum.destino}`}</span>
+          <span>{`"data": ${forum.data}`}</span>
+          <span>{`"pessoas": ${forum.pessoas}`}</span>
+          <span>{'}'}</span>
+        </span>
+      </div>
     </div>
   )
 }

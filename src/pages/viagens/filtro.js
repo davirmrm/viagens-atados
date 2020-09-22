@@ -1,25 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  Button,
-  Data,
-  IcoCalendario,
-  IcoImagem,
-  IcoLocalizacao,
-  IcoPesquisar,
-  IcoPessoa,
-  IcoSearch,
-  Input
-} from '../../component'
+import { Button, Data, IcoCalendario, IcoImagem, IcoLocalizacao, IcoPesquisar, IcoPessoa, Input } from '../../component'
 import { RadioButton } from '../../component/form/radiobuton/radiobutton'
-import { atualizarFiltro } from './redux/ViagensActions'
+import { atualizarFiltro, atualizarForum } from './redux/ViagensActions'
 
 export default () => {
   const dispatch = useDispatch()
   const [tipoIdaVolta, setTipoIdaVolta] = useState({ id: '0', name: 'Ida e volta' })
 
-  const locales = useSelector(state => state.appState.idioma)
-  const defaltText = require(`./nls/${locales}.json`)
   const filtro = useSelector(state => state.viagensState.filtro)
 
   const selectIdaVolta = [
@@ -60,16 +48,15 @@ export default () => {
           before={<IcoLocalizacao />}
           className='col-3'
         />
-        <div className='col-3'>
-          <Data
-            label={'Data de ' + textoData[tipoIdaVolta.id]}
-            name='data'
-            action={e => dispatch(atualizarFiltro(e))}
-            value={filtro.data}
-            before={<IcoCalendario />}
-            inicioFim={tipoIdaVolta.id === '0' ? true : false}
-          />
-        </div>
+        <Data
+          label={'Data de ' + textoData[tipoIdaVolta.id]}
+          name='data'
+          action={e => dispatch(atualizarFiltro(e))}
+          value={filtro.data}
+          before={<IcoCalendario />}
+          inicioFim={tipoIdaVolta.id === '0' ? true : false}
+          className='col-3'
+        />
         <Input
           label='Número de pessoas'
           name='pessoas'
@@ -81,7 +68,7 @@ export default () => {
         />
       </div>
       <div className='box-btn'>
-        <Button color='primary' action={() => console.log(filtro)} variant='normal'>
+        <Button color='primary' action={() => dispatch([atualizarForum(filtro), console.log(filtro)])} variant='normal'>
           <IcoPesquisar /> Busque as viagens
         </Button>
       </div>

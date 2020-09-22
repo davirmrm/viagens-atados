@@ -1,3 +1,9 @@
+export const MENU_STATUS = 'MENU_STATUS'
+export const menuOpen = s => ({
+  type: MENU_STATUS,
+  payload: s
+})
+
 export const CARREGANDO_ALERT = 'CARREGANDO_ALERT'
 const setCarrengando = alert => ({
   type: CARREGANDO_ALERT,

@@ -64,7 +64,7 @@ export function Data({
       <label htmlFor={`id-${name}`}>{label}</label>
       <div>
         {before ? <span className='before-input'>{before}</span> : null}
-        <input
+        {/* <input
           style={{ paddingLeft: before ? '35px' : null }}
           type={type}
           name={name}
@@ -72,7 +72,14 @@ export function Data({
           defaultValue={value}
           onClick={() => setOpenCalendario(!openCalendario)}
           disabled={disabled}
-        />
+        /> */}
+        <button
+          style={{ paddingLeft: before ? '35px' : null }}
+          className='select-selected '
+          onClick={() => setOpenCalendario(!openCalendario)}
+        >
+          {value ? value : 'Selecione uma data'}
+        </button>
         {openCalendario ? (
           <Calendario action={e => handleData(e)} dataInicio={selecionado.dataInicio} dataFim={selecionado.dataFim} />
         ) : null}
